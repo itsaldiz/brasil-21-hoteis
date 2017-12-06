@@ -1,0 +1,324 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <title>Brasil 21 Suítes</title>
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="css/estilo.css"/>
+        <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css"/>
+    </head> 
+    <style>
+        .row > .column {
+          padding: 0 8px;
+        }
+
+        .row:after {
+          content: "";
+          display: table;
+          clear: both;
+        }
+
+        .column {
+          float: left;
+          width: 25%;
+        }
+
+        /* The Modal (background) */
+        .modal {
+          display: none;
+          position: fixed;
+          z-index: 1;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          overflow: auto;
+          background-color: black;
+        }
+
+        /* Modal Content */
+        .modal-content {
+          position: relative;
+          background-color: #fefefe;
+          margin: auto;
+          padding: 0;
+          width: 90%;
+          max-width: 1200px;
+        }
+
+
+        /* The Close Button */
+        .close {
+          color: white;
+          position: absolute;
+          top: 10px;
+          right: 25px;
+          font-size: 35px;
+          font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+          color: #999;
+          text-decoration: none;
+          cursor: pointer;
+        }
+
+        .mySlides {
+          display: none;
+        }
+
+        /* Next & previous buttons */
+        .prev,
+        .next {
+          cursor: pointer;
+          position: absolute;
+          top: 50%;
+          width: auto;
+          padding: 16px;
+          margin-top: -50px;
+          color: white;
+          font-weight: bold;
+          font-size: 20px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+          user-select: none;
+          -webkit-user-select: none;
+        }
+
+        /* Position the "next button" to the right */
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        /* On hover, add a black background color with a little bit see-through */
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        /* Number text (1/3 etc) */
+        .numbertext {
+          color: #f2f2f2;
+          font-size: 12px;
+          padding: 8px 12px;
+          position: absolute;
+          top: 0;
+        }
+
+        .caption-container {
+          text-align: center;
+          background-color: black;
+          padding: 2px 16px;
+          color: white;
+        }
+
+        img.demo {
+          opacity: 0.6;
+        }
+
+        .active,
+        .demo:hover {
+          opacity: 1;
+        }
+
+        img.hover-shadow {
+          transition: 0.3s
+        }
+
+        .hover-shadow:hover {
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+        }
+    </style>
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top bg-graydark">
+            <div class="container">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html"> 
+                        <img class="img-responsive" src="imagens/hotelaria_branca.png" alt="Logo">
+                    </a>
+                </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="navbar-text hvr-underline-from-center"><a style="color:#fff;" href="index.html">Home</a></li>	
+                    <li class="navbar-text hvr-underline-from-center"><a style="color:#fff;" href="hoteis.html">Nossos Hotéis</a></li>
+                    <li class="navbar-text hvr-underline-from-center"><a style="color:#fff;" href="contato.html">Contato</a></li>
+                    <li class="navbar-text hvr-underline-from-center"><a style="color:#fff;"><i class="fa fa-phone fa-lg" aria-hidden="true"></i> (61) 3218-4700</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="jumbotron">
+            <div class="retro">
+                <img style="position: absolute; z-index: -1;" class="img-responsive" alt="foto suites" src="imagens/suites-6.jpg"/>
+            </div>
+        </div>
+        <div class="text-center" style=" color:White; padding-top: 250px;">
+            <h1>Brasil 21 Suítes</h1>
+            <p class="text-center lead"> Bloco F</p>
+            <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+            <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+            <i class="fa fa-star fa-lg" aria-hidden="true"></i>
+            <i class="fa fa-star fa-lg" aria-hidden="true"></i><br/><br/>
+            <a class="btn btn-outline hvr-sweep-to-top" href="#" role="button" style="background-color:transparent; font-size: 12pt; color:white;">Reserve Já</a>
+        </div>
+        <!-- DESCRIÇÃO -->
+        <div class="container">	
+            <div class="row" style="padding-top: 280px;">
+                <div class="col-md-8 text-justify">
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation" class="active"><a href="#descricaosuites" aria-controls="descricaosuites" role="tab" data-toggle="tab" style=" color: #333;">Descrição</a></li>
+                        <li role="presentation"><a href="#espacosuites" aria-controls="espacosuites" role="tab" data-toggle="tab" style=" color: #333;">Gastronomia</a></li> 
+                    </ul>
+                    <div class="tab-content" style="padding-top: 20px;">
+                        <div role="tabpanel" class="tab-pane active" id="descricaosuites">Todas as unidades são suites com piso de tabua corrida. O hotel está concebido para viajantes de negócios que precisam de utilizar a Internet ou gostariam de fazer um café enquanto lêem um jornal confortávelmente instalados numa cama Premium Flex. É projetado para pessoas que procuram mais do que apenas um quarto com uma cama para depois de um árduo dia de trabalho. Os apartamentos são compostos por amplo banheiro com secador de cabelo; cama Queen ou 2 camas de solteirão, duas linhas telefônicas; 2 TVs de 32” polegadas com TV a Cabo; rádio relógio; acesso à internet WiFi sem custo; mesa de trabalho; mesa para serviço de quarto; minibar; acesso por cartão magnético; serviço de quarto 24 horas.</div>
+                        <div role="tabpanel" class="tab-pane" id="espacosuites">O Brasil 21 Suítes abriga um dos restaurantes que compõem o Polo Gastronômico Brasil 21: o Lucca, que é um excelente espaço para a realização do seu evento, com alta gastronomia e ambiente sofisticado.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h4>Serviços</h4>
+                    <table class="table table-striped">
+                        <tbody>
+                            <tr>
+                                <td><i class="fa fa-check-square-o" aria-hidden="true"></i> Wi-Fi</td>
+                                <td><i class="fa fa-check-square-o" aria-hidden="true"></i> Elevador</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-check-square-o" aria-hidden="true"></i> Restaurantes</td>
+                                <td><i class="fa fa-check-square-o" aria-hidden="true"></i> Fitness Center</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-check-square-o" aria-hidden="true"></i> Lavanderia</td>
+                                <td><i class="fa fa-check-square-o" aria-hidden="true"></i> Computadores</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-check-square-o" aria-hidden="true"></i> Estacionamento</td>
+                                <td><i class="fa fa-check-square-o" aria-hidden="true"></i> Recepção 24 horas</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- IMAGENS -->
+         <div class="container">	
+            <div class="row" style="padding-bottom:70px; padding-top: 60px;">
+                <h2 class="text-center" style="padding-bottom:50px;">Tudo o que você <strong>precisa</strong></h2>
+                <div class="column col-md-3">
+                    <img src="imagens/lucca-suites3.jpg" alt="lucca" onclick="openModal();currentSlide(1)" class="hover-shadow img-responsive">
+                </div>
+                <div class="column col-md-3">
+                    <img src="imagens/suites-4.jpg" alt="suites 4" onclick="openModal();currentSlide(2)" class="hover-shadow img-responsive">
+                </div>
+                <div class="column col-md-3">
+                    <img src="imagens/suites-5.jpg" alt="suites 5" onclick="openModal();currentSlide(3)" class="hover-shadow img-responsive">
+                </div>
+                <div class="column col-md-3">
+                    <img src="imagens/suites-11.jpg" alt="suites 11" onclick="openModal();currentSlide(4)" class="hover-shadow img-responsive">
+                </div>
+            </div>
+
+            <div id="myModal" class="modal">
+                <span class="close cursor" onclick="closeModal()">&times;</span>
+                <div class="modal-content">
+                    <div class="mySlides">
+                        <div class="numbertext"></div>
+                        <img src="imagens/lucca-suites3.jpg" alt="lucca" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext"></div>
+                        <img src="imagens/suites-4.jpg" alt="suites 4" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext"></div>
+                        <img src="imagens/suites-5.jpg" alt="suites 5" style="width:100%">
+                    </div>
+
+                    <div class="mySlides">
+                        <div class="numbertext"></div>
+                        <img src="imagens/suites11.jpg" alt="suites 11" style="width:100%">
+                    </div>
+
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+                    <div class="caption-container">
+                        <p id="caption"></p>
+                    </div>
+
+
+                    <div class="column">
+                        <img class="demo img-responsive" src="imagens/lucca-suites3.jpg" onclick="currentSlide(1)">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo img-responsive" src="imagens/suites-4.jpg" onclick="currentSlide(2)">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo img-responsive" src="imagens/suites-5.jpg" onclick="currentSlide(3)">
+                    </div>
+
+                    <div class="column">
+                        <img class="demo img-responsive" src="imagens/suites-11.jpg" onclick="currentSlide(4)">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- OUTROS HOTÉIS -->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row" style="padding-top: 50px; padding-bottom:100px;"><hr>
+                    <h2 class="text-center" style="padding-bottom: 50px;">Outros <strong>Hotéis</strong></h2>
+                    <div class=" col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="imagens/conv-13.jpg" alt="">
+                            <div class="caption">
+                                <h3 class="text-center" style="font-size: 16pt;">Brasil 21 Convention</h3>
+                                <h4 class="text-center">Bloco B</h4>
+                                <p class="text-center" style="padding-top: 10px;"><a class="btn btn-outline hvr-rectangle-out" href="convention.html"  role="button" style="background-color:#011142; color:white;">Leia Mais</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <img class="img-responsive" src="imagens/melia-121.jpg" alt="">
+                            <div class="caption">
+                                <h3 class="text-center" style="font-size: 16pt;">Meliã Brasil 21</h3>
+                                <h4 class="text-center">Bloco D</h4>
+                                <p class="text-center" style="padding-top: 10px;"><a class="btn btn-outline hvr-rectangle-out" href="melia.html"  role="button" style="background-color:#011142; color:white;">Leia Mais</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+         <!-- RODA PÉ -->
+        <div class="container-fluid bg-graydark">
+            <footer>
+                <div class="container">
+                    <div class="row" style="padding-top: 10px;">
+                        <div class="text-center" style="color:#fff;"><hr>
+                            Copyright © 2017 - Todos os direitos reservados.
+                        </div>
+                    </div>
+                    <a id="toTop" href="#" class="btn btn-lg" role="button" title="Click para voltar ao topo da página" data-toggle="tooltip" data-placement="left" style="border: 2px solid black; padding-right: 30px; padding-bottom: 20px"><span class="glyphicon glyphicon-chevron-up"></span></a>
+                </div>
+            </footer>
+        </div>
+    </body>
+</html>
+
+
+<!-- jQuery (obrigatório para plugins JavaScript do Bootstrap) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<!-- Inclui todos os plugins compilados (abaixo), ou inclua arquivos separadados se necessário -->
+<script src="js/bootstrap.min.js"></script>
+
+
+<script language="javascript" src="js/estilo.js"></script>
